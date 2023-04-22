@@ -1,0 +1,9 @@
+<main>
+  <app-user 
+    *ngFor = "let user of users | filterByChar:charFilter"
+    [name] = "user.name"
+    [status] = "user.status"
+    [url] = "user.url">
+    >   
+  </app-user>
+</main>
