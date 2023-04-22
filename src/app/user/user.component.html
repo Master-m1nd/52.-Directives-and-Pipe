@@ -1,7 +1,7 @@
 <div [ngClass]="{online: isOnline}" class="wrapper">
     <div class="body">
         <div class="picture">
-            <img src={{url}} alt="">
+            <img [src]="url" alt="">
             <span *ngIf="!isOnline" class="offlineStatus">Offline</span>
             <span *ngIf="isOnline" class="onlineStatus">Online</span>
         </div>
@@ -12,4 +12,3 @@
     </div>
     <button (click)="isOnline = !isOnline" class="network">{{isOnline ? "Offline" : "Online"}}</button>
 </div>
-
